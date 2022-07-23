@@ -115,7 +115,7 @@ class Submission(models.Model):
               55 * interpolate(.5, .8, 0, 1, mean_result) +
               15 * interpolate(.5, .7, 0, 1, result[0]) +
               15 * interpolate(.5, .9, 0, 1, result[1]) +
-              15 * interpolate(.5, .7, 0, 1, result[2])
+              15 * interpolate(.5, .75, 0, 1, result[2])
           )
       ```
 
@@ -162,7 +162,7 @@ class Submission(models.Model):
         "time": 1658419999,
         "avatar": "XXXXX"
     },
-    ....
+    ...
 ]
 ```
 
@@ -243,7 +243,7 @@ class Submission(models.Model):
 {
     "user": "lambda_x",
     "avatar": "...",
-    "content": "...",
+    "content": "..."
 }
 ```
 
