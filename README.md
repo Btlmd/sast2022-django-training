@@ -134,7 +134,7 @@ class Submission(models.Model):
 
 
 
-#### 排行榜
+### 排行榜
 
 ```
 [GET] /leaderboard
@@ -144,7 +144,7 @@ class Submission(models.Model):
 
 对于用户的多次提交，无论分数高低，只返回最后一次提交。
 
-##### 响应
+#### 响应
 
 ```json
 [
@@ -166,7 +166,7 @@ class Submission(models.Model):
 ]
 ```
 
-##### TODO
+#### TODO
 
 该接口已经实现好了。需要完成的是
 
@@ -175,7 +175,7 @@ class Submission(models.Model):
 
 
 
-#### 提交历史
+### 提交历史
 
 ```
 [GET] /history/<user>
@@ -183,11 +183,11 @@ class Submission(models.Model):
 
 该接口提供指定用户的提交历史，按照提交时间 `time` 升序排列
 
-##### 请求参数
+#### 请求参数
 
 - 用户名称，从请求 URL 中获得。
 
-##### 响应
+#### 响应
 
 该用户的全部历史提交信息。
 
@@ -207,7 +207,7 @@ class Submission(models.Model):
 ]
 ```
 
-##### TODO
+#### TODO
 
 - 按照约定在完成视图函数 `history` 
 
@@ -227,7 +227,7 @@ class Submission(models.Model):
 
 
 
-#### 提交
+### 提交
 
 ```
 [POST] /submit
@@ -235,7 +235,7 @@ class Submission(models.Model):
 
 该接口用于接受用户提交的内容，进行评判，然后更新 Leaderboard。
 
-##### 请求体样例
+#### 请求体样例
 
 接收到的请求形如
 
@@ -253,7 +253,7 @@ class Submission(models.Model):
 | avatar  | 用 base64 编码的用户头像，可以直接视为字符串 |
 | content | 用户提交的内容，一个字符串                   |
 
-##### 响应
+#### 响应
 
 响应主要包括两部分
 
@@ -298,7 +298,7 @@ class Submission(models.Model):
 ```json
 {
     "code": -2,
-    "msg": "图像太大了"，
+    "msg": "图像太大了",
 }
 ```
 
@@ -311,7 +311,7 @@ class Submission(models.Model):
 }
 ```
 
-##### TODO
+#### TODO
 
 - 补全这一视图函数，然后为它配置路由
 - 视图函数实现思路参考
@@ -326,13 +326,13 @@ class Submission(models.Model):
 
 
 
-#### 投票
+### 投票
 
 ```
 [POST] /vote
 ```
 
-##### 请求体样例
+#### 请求体样例
 
 ```json
 {
@@ -351,7 +351,7 @@ class Submission(models.Model):
 - 拒绝 User-Agent 不太合理的请求
   - 可以使用 `req.headers` 查看请求的 HTTP 头
 
-##### 响应
+#### 响应
 
 对于不符合要求的请求，返回
 
@@ -374,7 +374,7 @@ class Submission(models.Model):
 }
 ```
 
-##### TODO
+#### TODO
 
 - 补全这一视图函数，然后为它配置路由
 
