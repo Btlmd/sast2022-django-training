@@ -27,7 +27,7 @@ def leaderboard(req: HttpRequest):
 
 
 @method(["GET"])
-def history(req: HttpRequest, username: int):
+def history(req: HttpRequest, username: str):
     # TODO: Complete `/history/<slug:username>` API
 
     raise NotImplementedError
