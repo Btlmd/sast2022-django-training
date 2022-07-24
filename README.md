@@ -7,6 +7,9 @@ Lambda X
 在 Linux 练习和 PyTorch 练习中，我们使用过一个前后端耦合的 [Leaderboard](http://121.5.165.232:14000/)。在接下来的前后端开发练习中，我们希望实现一个前后端分离的 Leaderboard。本次作业的目标是完成它的后端开发工作。
 
 
+## Update
+### 2022-07-24
+- 修正了一个错误，将 `settings.py` 中的 `zh-cn` 修正为 `zh-hans`。
 
 ## 功能简介
 
