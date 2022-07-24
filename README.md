@@ -10,6 +10,7 @@ Lambda X
 ## Update
 ### 2022-07-24
 - 修正了一个错误，将 `settings.py` 中的 `zh-cn` 修正为 `zh-hans`。
+- 修正了一个错误，将 `views.py` 中的 `username: int` 修正为 `username: str`
 
 ## 功能简介
 
